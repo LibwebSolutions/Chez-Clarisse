@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us | Chez Clarisse Mama Africa</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+
+  </style>
+  <link rel="stylesheet" href="about.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="container-fluid d-flex justify-content-between align-items-center">
+    <h1>Chez Clarisse</h1>
+
+    <!-- Desktop Nav -->
+    <nav class="d-none d-md-block">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="menu.html">Menu</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+      <a href="visit.html">Visit</a>
+    </nav>
+
+    <!-- Mobile Nav -->
+    <nav class="navbar navbar-dark d-md-none">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNav" aria-controls="mobileNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mobileNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="menu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="visit.html">Visit</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Intro Section -->
+  <section class="intro">
+    <h2>Our Story</h2>
+  </section>
+
+  <!-- About Content -->
+  <section class="story" id="story">
+    <h3>Chez Clarisse Mama Africa</h3>
+    <p>
+      Nestled in the vibrant heart of Osu, Accra, Chez Clarisse Mama Africa isn't just a restaurant — it's an unforgettable cultural journey. Since its humble beginnings, Chez Clarisse has captured the spirit of West African culinary traditions with a twist of Ivorian authenticity and Ghanaian warmth.
+      <br><br>
+      Renowned for its sizzling grilled tilapia, attiéké, jollof, and aromatic sauces, the restaurant embodies hospitality and home-cooked love. Whether you're relaxing under the stars or savoring a spicy meal at lunch, the vibrant ambiance and friendly staff make every visit a celebration.
+      <br><br>
+      Founded by the passionate Clarisse herself, the restaurant honors her vision of food that brings people together, connects cultures, and leaves you smiling. Today, it's a must-visit for food lovers, tourists, locals, and anyone craving soul-satisfying African cuisine.
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Chez Clarisse Mama Africa | Osu, Accra
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Scroll Animation
+    window.addEventListener('scroll', () => {
+      const storySection = document.getElementById('story');
+      const storyTop = storySection.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+
+      if (storyTop < windowHeight - 100) {
+        storySection.classList.add('show');
+      }
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body, html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+    background: #fff8f0;
+    color: #333;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  header {
+    background: rgba(0, 0, 0, 0.85);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    transition: background 0.4s ease;
+  }
+  header h1 {
+    color: #f5b942;
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  nav a {
+    color: #fff;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  nav a:hover {
+    color: #f5b942;
+    transform: scale(1.05);
+  }
+
+  /* Gallery Section */
+  .gallery {
+    margin-top: 80px; /* To avoid overlapping with fixed header */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 40px;
+  }
+  .gallery img {
+    width: 80%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  .gallery img:hover {
+    transform: scale(1.05);
+  }
+
+  footer {
+    background: #222;
+    color: #eee;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+    font-size: 14px;
+    margin-top: 50px; /* Push footer down from the gallery content */
+  }
+
+  @media (max-width: 768px) {
+    .gallery {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 480px) {
+    header h1 {
+      font-size: 20px;
+    }
+    nav {
+      display: none; /* optional: simplify header for small screens */
+    }
+  }
